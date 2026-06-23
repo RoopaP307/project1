@@ -83,6 +83,11 @@
                         </Record>
                     </Collection>
                 </Annotation>
+                <Annotation Term="UI.SelectionFields">
+                    <Collection>
+                        <PropertyPath>Vbeln</PropertyPath>
+                    </Collection>
+                </Annotation>
             </Annotations>
         </Schema>
     </edmx:DataServices>
