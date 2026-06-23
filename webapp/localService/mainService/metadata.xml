@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="4.0" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMUNICATION',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.Communication.v1" Alias="Communication"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_PERSONALDATA',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.PersonalData.v1" Alias="PersonalData"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_ANALYTICS',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.Analytics.v1" Alias="Analytics"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_AGGREGATION',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="Org.OData.Aggregation.V1" Alias="SAP__aggregation"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_CAPABILITIES',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="Org.OData.Capabilities.V1" Alias="SAP__capabilities"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_CODELIST',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.CodeList.v1" Alias="SAP__CodeList"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMON',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="SAP__common"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_CORE',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="Org.OData.Core.V1" Alias="SAP__core"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_HIERARCHY',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.Hierarchy.v1" Alias="SAP__hierarchy"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_HTML5',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.HTML5.v1" Alias="SAP__HTML5"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_MEASURES',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="Org.OData.Measures.V1" Alias="SAP__measures"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_ODM',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.ODM.v1" Alias="SAP__ODM"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_PDF',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.PDF.v1" Alias="SAP__PDF"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_SESSION',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.Session.v1" Alias="SAP__session"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_UI',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.UI.v1" Alias="SAP__UI"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_VALIDATION',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="Org.OData.Validation.V1" Alias="SAP__validation"/>
+    </edmx:Reference>
+    <edmx:DataServices>
+        <Schema Namespace="com.sap.gateway.srvd.zservice.v0001" Alias="SAP__self">
+            <Annotation Term="SAP__core.SchemaVersion" String="1.0.0"/>
+            <EntityType Name="zcds1_basType">
+                <Key>
+                    <PropertyRef Name="Vbeln"/>
+                    <PropertyRef Name="Posnr"/>
+                </Key>
+                <Property Name="Vbeln" Type="Edm.String" Nullable="false" MaxLength="10"/>
+                <Property Name="Posnr" Type="Edm.String" Nullable="false" MaxLength="6"/>
+                <Property Name="Erdat" Type="Edm.Date"/>
+                <Property Name="Erzet" Type="Edm.TimeOfDay" Nullable="false"/>
+                <Property Name="Ernam" Type="Edm.String" Nullable="false" MaxLength="12"/>
+                <Property Name="Matnr" Type="Edm.String" Nullable="false" MaxLength="18"/>
+                <Property Name="Kunnr" Type="Edm.String" Nullable="false" MaxLength="10"/>
+                <Property Name="Waerk" Type="Edm.String" Nullable="false" MaxLength="5"/>
+                <Property Name="Netpr" Type="Edm.Decimal" Nullable="false" Precision="11" Scale="variable"/>
+                <Property Name="Netwr" Type="Edm.Decimal" Nullable="false" Precision="15" Scale="variable"/>
+                <Property Name="Kwmeng" Type="Edm.Decimal" Nullable="false" Precision="15" Scale="3"/>
+                <Property Name="Vrkme" Type="Edm.String" Nullable="false" MaxLength="3"/>
+                <Property Name="Maktx" Type="Edm.String" Nullable="false" MaxLength="40"/>
+            </EntityType>
+            <EntityContainer Name="Container">
+                <EntitySet Name="zcds1_bas" EntityType="com.sap.gateway.srvd.zservice.v0001.zcds1_basType"/>
+            </EntityContainer>
+            <Annotations Target="SAP__self.zcds1_basType/Vbeln">
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Label" String="Sales Document"/>
+                <Annotation Term="SAP__common.Heading" String="Sales Doc."/>
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=VBELN_VA"/>
+            </Annotations>
+            <Annotations Target="SAP__self.zcds1_basType/Posnr">
+                <Annotation Term="SAP__common.IsDigitSequence"/>
+                <Annotation Term="SAP__common.Label" String="Sales Document Item"/>
+                <Annotation Term="SAP__common.Heading" String="SDItem"/>
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=POSNR_VA"/>
+            </Annotations>
+            <Annotations Target="SAP__self.zcds1_basType/Ernam">
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Label" String="Created By"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Name of Person Responsible for Creating the Object"/>
+            </Annotations>
+            <Annotations Target="SAP__self.zcds1_basType/Matnr">
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Label" String="Material"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Material Number"/>
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=MATNR"/>
+            </Annotations>
+            <Annotations Target="SAP__self.zcds1_basType/Kunnr">
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Label" String="Sold-to Party"/>
+                <Annotation Term="SAP__common.Heading" String="Sold-to"/>
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=KUNAG"/>
+            </Annotations>
+            <Annotations Target="SAP__self.zcds1_basType/Waerk">
+                <Annotation Term="SAP__common.IsCurrency"/>
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Label" String="Document Currency"/>
+                <Annotation Term="SAP__common.Heading" String="Crcy"/>
+                <Annotation Term="SAP__common.QuickInfo" String="SD Document Currency"/>
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=WAERK"/>
+            </Annotations>
+            <Annotations Target="SAP__self.zcds1_basType/Netpr">
+                <Annotation Term="SAP__measures.ISOCurrency" Path="Waerk"/>
+                <Annotation Term="SAP__common.Label" String="Net Price"/>
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=NETPR"/>
+            </Annotations>
+            <Annotations Target="SAP__self.zcds1_basType/Netwr">
+                <Annotation Term="SAP__measures.ISOCurrency" Path="Waerk"/>
+                <Annotation Term="SAP__common.Label" String="Net Value"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Net Value in Document Currency"/>
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=NETWR"/>
+            </Annotations>
+            <Annotations Target="SAP__self.zcds1_basType/Kwmeng">
+                <Annotation Term="SAP__measures.Unit" Path="Vrkme"/>
+                <Annotation Term="SAP__common.Label" String="Order Quantity"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Cumulative order quantity in sales units"/>
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=KWMENG"/>
+            </Annotations>
+            <Annotations Target="SAP__self.zcds1_basType/Vrkme">
+                <Annotation Term="SAP__common.IsUnit"/>
+                <Annotation Term="SAP__common.Label" String="Sales Unit"/>
+                <Annotation Term="SAP__common.Heading" String="SU"/>
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=VRKME"/>
+            </Annotations>
+            <Annotations Target="SAP__self.zcds1_basType">
+                <Annotation Term="SAP__common.Label" String="bas application for cds view"/>
+            </Annotations>
+            <Annotations Target="SAP__self.Container/zcds1_bas">
+                <Annotation Term="SAP__capabilities.SearchRestrictions">
+                    <Record>
+                        <PropertyValue Property="Searchable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.InsertRestrictions">
+                    <Record>
+                        <PropertyValue Property="Insertable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.DeleteRestrictions">
+                    <Record>
+                        <PropertyValue Property="Deletable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.UpdateRestrictions">
+                    <Record>
+                        <PropertyValue Property="Updatable" Bool="false"/>
+                        <PropertyValue Property="QueryOptions">
+                            <Record>
+                                <PropertyValue Property="SelectSupported" Bool="true"/>
+                            </Record>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.FilterRestrictions">
+                    <Record>
+                        <PropertyValue Property="FilterExpressionRestrictions">
+                            <Collection>
+                                <Record>
+                                    <PropertyValue Property="Property" PropertyPath="Netpr"/>
+                                    <PropertyValue Property="AllowedExpressions" String="MultiValue"/>
+                                </Record>
+                                <Record>
+                                    <PropertyValue Property="Property" PropertyPath="Netwr"/>
+                                    <PropertyValue Property="AllowedExpressions" String="MultiValue"/>
+                                </Record>
+                                <Record>
+                                    <PropertyValue Property="Property" PropertyPath="Kwmeng"/>
+                                    <PropertyValue Property="AllowedExpressions" String="MultiValue"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="SAP__self.Container">
+                <Annotation Term="SAP__CodeList.CurrencyCodes">
+                    <Record>
+                        <PropertyValue Property="Url" String="../../../../default/iwbep/common/0001/$metadata"/>
+                        <PropertyValue Property="CollectionPath" String="Currencies"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__CodeList.UnitsOfMeasure">
+                    <Record>
+                        <PropertyValue Property="Url" String="../../../../default/iwbep/common/0001/$metadata"/>
+                        <PropertyValue Property="CollectionPath" String="UnitsOfMeasure"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__common.ApplyMultiUnitBehaviorForSortingAndFiltering" Bool="true"/>
+                <Annotation Term="SAP__capabilities.FilterFunctions">
+                    <Collection>
+                        <String>eq</String>
+                        <String>ne</String>
+                        <String>gt</String>
+                        <String>ge</String>
+                        <String>lt</String>
+                        <String>le</String>
+                        <String>and</String>
+                        <String>or</String>
+                        <String>contains</String>
+                        <String>startswith</String>
+                        <String>endswith</String>
+                        <String>any</String>
+                        <String>all</String>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.SupportedFormats">
+                    <Collection>
+                        <String>application/json</String>
+                        <String>application/pdf</String>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="SAP__PDF.Features">
+                    <Record>
+                        <PropertyValue Property="DocumentDescriptionReference" String="../../../../default/iwbep/common/0001/$metadata"/>
+                        <PropertyValue Property="DocumentDescriptionCollection" String="MyDocumentDescriptions"/>
+                        <PropertyValue Property="ArchiveFormat" Bool="true"/>
+                        <PropertyValue Property="Border" Bool="true"/>
+                        <PropertyValue Property="CoverPage" Bool="true"/>
+                        <PropertyValue Property="FitToPage" Bool="true"/>
+                        <PropertyValue Property="FontName" Bool="true"/>
+                        <PropertyValue Property="FontSize" Bool="true"/>
+                        <PropertyValue Property="HeaderFooter" Bool="true"/>
+                        <PropertyValue Property="IANATimezoneFormat" Bool="true"/>
+                        <PropertyValue Property="Margin" Bool="true"/>
+                        <PropertyValue Property="Padding" Bool="true"/>
+                        <PropertyValue Property="ResultSizeDefault" Int="20000"/>
+                        <PropertyValue Property="ResultSizeMaximum" Int="20000"/>
+                        <PropertyValue Property="Signature" Bool="true"/>
+                        <PropertyValue Property="TextDirectionLayout" Bool="true"/>
+                        <PropertyValue Property="Treeview" Bool="true"/>
+                        <PropertyValue Property="UploadToFileShare" Bool="true"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.KeyAsSegmentSupported"/>
+                <Annotation Term="SAP__capabilities.AsynchronousRequestsSupported"/>
+            </Annotations>
+            <Annotations Target="SAP__self.zcds1_basType/Erdat">
+                <Annotation Term="SAP__common.Label" String="Created On"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Record Created On"/>
+            </Annotations>
+            <Annotations Target="SAP__self.zcds1_basType/Erzet">
+                <Annotation Term="SAP__common.Label" String="Time"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Entry time"/>
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=ERZET"/>
+            </Annotations>
+            <Annotations Target="SAP__self.zcds1_basType/Maktx">
+                <Annotation Term="SAP__common.Label" String="Material Description"/>
+                <Annotation Term="SAP__common.DocumentationRef" String="urn:sap-com:documentation:key?=type=DE&amp;id=MAKTX"/>
+            </Annotations>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>
