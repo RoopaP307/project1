@@ -66,8 +66,6 @@
                 </Annotation>
                 <Annotation Term="UI.LineItem">
                     <Collection>
-
-                    
                         <Record Type="UI.DataField">
                             <PropertyValue Property="Value" Path="Posnr"/>
                         </Record>
