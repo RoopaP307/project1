@@ -86,6 +86,7 @@
                 <Annotation Term="UI.SelectionFields">
                     <Collection>
                         <PropertyPath>Vbeln</PropertyPath>
+                        <PropertyPath>Matnr</PropertyPath>
                     </Collection>
                 </Annotation>
             </Annotations>
